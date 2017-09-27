@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.bzy/app/xhtml">
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content='width=device-width,user-scalable=no,minimal-ui'>
+<title id="title">  
+</title>
+<script type="text/javascript">
+var d = new Date()
+var time = d.getHours()
+document.getElementById("title").innerHTML="浏览器主页";
+</script>
+</head>
+<style>/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	text-align: cen
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+ 	background-color: #ffffff;
+}
+#search_input {
+	width: 90%;
+	height: 40px;
+	background-color: transparent;
+	border: none;
+	outline: 0;
+	font-size: 16px;
+	color: #4a4266;
+	padding: 0 10px;
+	border-radius: 50px
+}
+.search_part {
+	margin-bottom: 10px;
+	margin-top: 90px;
+}
+span {
+	display: block;
+	font-size: 12px;
+	overflow: hidden;
+	padding-left: 2px;
+	vertical-align: middle;
+}
+
+.search_bar {
+	box-shadow: 0 0 5px rgba(70,70,40,.255);
+	-webkit-animation: fadeIn 2.5s;
+	animation: fadeIn 2.5s;
+	background-color:  rgba(255,255,255,.0);
+	border-radius: 3px;
+	display: table;
+	vertical-align: middle;
+	width: 80%;
+	height: 20px;
+	max-width: 400px;
+	margin: 10px auto;
+}
+.search_barr {
+	
+	-webkit-animation: fadeIn 2.5s;
+	animation: fadeIn 2.5s;
+	
+	border-radius: 3px;
+	display: table;
+	vertical-align: middle;
+	width: 80%;
+	height: 20px;
+	max-width: 400px;
+	margin: 10px auto;
+}
+#search_submit {
+	outline: 0;
+	height: 40px;
+	float: right;
+	color: #4a4266;
+	font-size: 18px;
+	font-weight: 500;
+	border: none;
+	background-color: transparent;
+	padding: 0 13px 0 13px
+}
+
+#content {
+	width: 100%;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 15px;
+}
+.box {
+	-webkit-animation: fadeInDown 1s;
+	animation: fadeInDown 1s;
+	position: relative;
+	display: inline-block;
+	width: 75px;
+	border: 0;
+}
+.box a {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.url {
+	color: #4a4266;
+	height: 0.5em;
+	line-height: 1.5em;
+	width: 72px;
+	font-size: 0.75em;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: auto;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	padding-top: 0px;
+	padding-bottom: 8px;
+}
+.icon {
+	width: 3em;
+	height: 3em;
+	max-width: 72px;
+}
+
+#app-items {
+	width: 100%;
+	max-width: 400px;
+	margin: 0px auto;
+	text-align: center;
+	background-color: #fff;
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+
+.title {
+    background-color: #fffffff;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px 0 20px;
+    color: #4a4266;
+
+}
+
+#yiyan {
+	width: 100%;
+	max-width: 400px;
+	margin: 0px auto;
+	text-align: center;
+	background-color: #fff;
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+
+.shuxing {
+    color: #4a4266;
+    font-size: 12px;
+    height: 30px;
+    line-height: 20px;
+    padding: 0 10px 0 20px;
+}
+.ciba_ds_juzi {
+      height: auto!important;
+      float: none!important;
+}
+.ciba_ds_juzi a {
+     display:block;
+}
+@-webkit-keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0
+	}
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg)
+	}
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg)
+	}
+
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0);
+		transform: perspective(400px) rotateX(0);
+		opacity: 1
+	}
+}
+
+@keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		-ms-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0
+	}
+
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		-ms-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg)
+	}
+
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		-ms-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg)
+	}
+
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0);
+		-ms-transform: perspective(400px) rotateX(0);
+		transform: perspective(400px) rotateX(0);
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+		-ms-transform: translateY(-20px);
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+
+
+</style>
+
+<body>
+<div id="content">
+<br />
+
+<font color="#4A4266" size="3px" align=center><img src="dq.png" width="19" height="20" align="AbsBottom">世界的窗口</font>
+<div class="search_part">
+
+<form onsubmit="return search()" class="search_bar">
+<input type="submit" id="search_submit" value="搜索" >
+<span><input class="search" type="text" value="" autocomplete="off" id="search_input" placeholder="" ></span>
+</form>
+</div>
+<br />
+<br />
+<br />
+
+<div class="box">
+<a href="http://tieba.baidu.com/"></a>
+<p><img class="icon" src="tb.png" ></p>
+<p class="url">贴吧</p>
+</div>
+
+<div class="box">
+<a href="http://m.zhangyue.com/"></a>
+<p><img class="icon" src="ks.png" ></p>
+<p class="url">掌阅</p>
+</div>
+
+<div class="box">
+<a href="https://m.toutiao.com"></a>
+<p><img class="icon" src="tt.png" ></p>
+<p class="url">头条</p>
+</div>
+
+<div class="box">
+<a href="https://weibo.com"></a>
+<p><img class="icon" src="vb.png" ></p>
+<p class="url">微博</p>
+</div>
+
+</div>
+<div id="app-items">
+<div class="title"></div>
+<br />
+
+<div class="box">
+<a href="http://m.v.qq.com/"></a>
+<p><img class="icon" src="tx.png" ></p>
+<p class="url">腾讯视频</p>
+</div>
+
+<div class="box">
+<a href="http://m.budejie.com/"></a>
+<p><img class="icon" src="nh.png" ></p>
+<p class="url">百思不姐</p>
+</div>
+
+<div class="box">
+<a href="https://m.taobao.com/"></a>
+<p><img class="icon" src="gw.png" ></p>
+<p class="url">淘宝购物</p>
+</div>
+
+<div class="box">
+<a href="https://m.douyu.com/"></a>
+<p><img class="icon" src="dr.png" ></p>
+<p class="url">斗鱼直播</p>
+</div>
+
+<br />
+</div>
+<script type="text/javascript">function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://m.baidu.com/s?from=&wd=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}</script>
+</body>
+</html>
