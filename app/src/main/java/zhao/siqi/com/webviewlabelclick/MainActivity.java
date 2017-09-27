@@ -178,22 +178,29 @@ public class MainActivity extends Activity implements View.OnClickListener {
             mWebViewClick = (WebView) mWebViewContainer.getChildAt(mWebViewsList.size() - 1);
         }
 
+        int index = (int) v.getTag();
+
+        // 当前标签删除    下一个变黑
+        for (int i = 0; i < mLabelList.size(); i++) {
+            TextView view1 = mLabelList.get(i);
+
+            if (i == index) {
+                view1.setTextColor(Color.BLACK);
+            } else {
+                // 如果有其他的黑色   变成白色
+                view1.setTextColor(Color.WHITE);
+            }
+
+            mLabelContainer.getChildAt(i).setTag(i);
+        }
+
+        // 设置webview角标
         for (int i = 0; i < mWebViewsList.size(); i++) {
             XWebView view = mWebViewsList.get(i);
             view.setLabelIndex(i);
         }
 
         mIndex--;
-
-        // 当前标签删除    下一个变黑
-        for (int i = 0; i < mLabelList.size(); i++) {
-            TextView view1 = mLabelList.get(i);
-
-            // 当前集合的第一个  就是下一个  变黑
-            if (i == 0) {
-                view1.setTextColor(Color.BLACK);
-            }
-        }
     }
 
     /**
