@@ -184,11 +184,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         for (int i = 0; i < mLabelList.size(); i++) {
             TextView view1 = mLabelList.get(i);
 
-            if (i == index) {
+            // 当前字体颜色
+            int color = view1.getCurrentTextColor();
+
+            if (i == index && color != Color.WHITE) {
                 view1.setTextColor(Color.BLACK);
-            } else {
-                // 如果有其他的黑色   变成白色
-                view1.setTextColor(Color.WHITE);
             }
 
             mLabelContainer.getChildAt(i).setTag(i);
