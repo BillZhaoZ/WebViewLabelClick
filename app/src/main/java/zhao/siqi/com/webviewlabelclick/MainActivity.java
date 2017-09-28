@@ -16,30 +16,27 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * 主页
  */
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    public static final String LOADURL = "file:///android_asset/app.html";
+    @BindView(R.id.web_container)
+    FrameLayout mWebViewContainer;
+    @BindView(R.id.label_container)
+    LinearLayout mLabelContainer;
+
     //public static final String LOADURL = "http://www.baidu.com";
+    public static final String LOADURL = "file:///android_asset/app.html";
 
     /**
      * 存放WebView集合
      */
     private List<XWebView> mWebViewsList;
     private List<TextView> mLabelList;
-
-    /**
-     * 存放WebView的布局
-     */
-    private FrameLayout mWebViewContainer;
-
-    /**
-     * 存放底部Button的布局
-     */
-    private LinearLayout mLabelContainer;
-
     private WebView mWebViewClick;
     private int mIndex;
 
@@ -47,6 +44,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        ButterKnife.bind(this);
 
         initView();
     }
@@ -56,8 +55,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
      */
     private void initView() {
         mWebViewsList = new ArrayList<>();
-        mWebViewContainer = (FrameLayout) findViewById(R.id.web_container);
-        mLabelContainer = (LinearLayout) findViewById(R.id.label_container);
 
         mIndex = 0;
         mLabelList = new ArrayList<TextView>();

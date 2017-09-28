@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.bzy/app/xhtml">
+
 <head>
-<meta content="en-us" http-equiv="Content-Language" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta name="viewport" content='width=device-width,user-scalable=no,minimal-ui'>
-<title id="title">  
-</title>
-<script type="text/javascript">
+    <meta content="en-us" http-equiv="Content-Language"/>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta name="viewport" content='width=device-width,user-scalable=no,minimal-ui'>
+    <title id="title">  
+    </title>
+    <script type="text/javascript">
+
 var d = new Date()
 var time = d.getHours()
 document.getElementById("title").innerHTML="浏览器主页";
-</script>
+
+
+
+
+    </script>
 </head>
+
 <style>/
 
 * {
@@ -276,79 +283,86 @@ span {
 
 
 
+
 </style>
 
 <body>
 <div id="content">
-<br />
+    <br/>
 
-<font color="#4A4266" size="3px" align=center><img src="dq.png" width="19" height="20" align="AbsBottom">世界的窗口</font>
-<div class="search_part">
+    <font color="#4A4266" size="3px" align=center><img src="dq.png" width="19" height="20"
+                                                       align="AbsBottom">世界的窗口</font>
+    <div class="search_part">
 
-<form onsubmit="return search()" class="search_bar">
-<input type="submit" id="search_submit" value="搜索" >
-<span><input class="search" type="text" value="" autocomplete="off" id="search_input" placeholder="" ></span>
-</form>
-</div>
-<br />
-<br />
-<br />
+        <form onsubmit="return search()" class="search_bar">
+            <input type="submit" id="search_submit" value="搜索">
+            <span><input class="search" type="text" value="" autocomplete="off" id="search_input"
+                         placeholder=""></span>
+        </form>
+    </div>
+    <br/>
+    <br/>
+    <br/>
 
-<div class="box">
-<a href="http://tieba.baidu.com/"></a>
-<p><img class="icon" src="tb.png" ></p>
-<p class="url">贴吧</p>
-</div>
+    <div class="box">
+        <a href="http://tieba.baidu.com/"></a>
+        <p><img class="icon" src="tb.png"></p>
+        <p class="url">贴吧</p>
+    </div>
 
-<div class="box">
-<a href="http://m.zhangyue.com/"></a>
-<p><img class="icon" src="ks.png" ></p>
-<p class="url">掌阅</p>
-</div>
+    <div class="box">
+        <a href="http://m.zhangyue.com/"></a>
+        <p><img class="icon" src="ks.png"></p>
+        <p class="url">掌阅</p>
+    </div>
 
-<div class="box">
-<a href="https://m.toutiao.com"></a>
-<p><img class="icon" src="tt.png" ></p>
-<p class="url">头条</p>
-</div>
+    <div class="box">
+        <a href="https://m.toutiao.com"></a>
+        <p><img class="icon" src="tt.png"></p>
+        <p class="url">头条</p>
+    </div>
 
-<div class="box">
-<a href="https://weibo.com"></a>
-<p><img class="icon" src="vb.png" ></p>
-<p class="url">微博</p>
-</div>
+    <div class="box">
+        <a href="https://weibo.com"></a>
+        <p><img class="icon" src="vb.png"></p>
+        <p class="url">微博</p>
+    </div>
 
 </div>
 <div id="app-items">
-<div class="title"></div>
-<br />
+    <div class="title"></div>
+    <br/>
 
-<div class="box">
-<a href="http://m.v.qq.com/"></a>
-<p><img class="icon" src="tx.png" ></p>
-<p class="url">腾讯视频</p>
-</div>
+    <div class="box">
+        <a href="http://m.v.qq.com/"></a>
+        <p><img class="icon" src="tx.png"></p>
+        <p class="url">腾讯视频</p>
+    </div>
 
-<div class="box">
-<a href="http://m.budejie.com/"></a>
-<p><img class="icon" src="nh.png" ></p>
-<p class="url">百思不姐</p>
-</div>
+    <div class="box">
+        <a href="http://m.budejie.com/"></a>
+        <p><img class="icon" src="nh.png"></p>
+        <p class="url">百思不姐</p>
+    </div>
 
-<div class="box">
-<a href="https://m.taobao.com/"></a>
-<p><img class="icon" src="gw.png" ></p>
-<p class="url">淘宝购物</p>
-</div>
+    <div class="box">
+        <a href="https://m.taobao.com/"></a>
+        <p><img class="icon" src="gw.png"></p>
+        <p class="url">淘宝购物</p>
+    </div>
 
-<div class="box">
-<a href="https://m.douyu.com/"></a>
-<p><img class="icon" src="dr.png" ></p>
-<p class="url">斗鱼直播</p>
-</div>
+    <div class="box">
+        <a href="https://m.douyu.com/"></a>
+        <p><img class="icon" src="dr.png"></p>
+        <p class="url">斗鱼直播</p>
+    </div>
 
-<br />
+    <br/>
 </div>
-<script type="text/javascript">function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://m.baidu.com/s?from=&wd=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}</script>
+<script type="text/javascript">
+    function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://m.baidu.com/s?from=&wd=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}
+
+
+</script>
 </body>
 </html>
